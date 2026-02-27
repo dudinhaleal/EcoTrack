@@ -29,6 +29,26 @@ class _LoginScreenState extends State<LoginScreen> {
               color: Colors.green[400]
             ),),
           ),
+          TextField(
+            controller: emailController,
+            decoration: InputDecoration(
+              labelText: 'Email',
+              prefixIcon: Icon(Icons.email),
+              border: OutlineInputBorder()
+            ),
+          ),
+          SizedBox(
+            height: 20,
+            width: 20,
+          ),
+          TextField(
+            controller: senhaController,
+            decoration: InputDecoration(
+              labelText: 'Senha',
+              prefixIcon: Icon(Icons.password),
+              border: OutlineInputBorder()
+            ),
+          ),
         ],
       ),
     );
