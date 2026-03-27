@@ -1,3 +1,4 @@
+import 'package:app_ecotruck/screens/home.dart';
 import 'package:flutter/material.dart';
 
 // com comandos para facilitar
@@ -59,16 +60,19 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 50,
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.purple,
                   foregroundColor: Colors.white,
                 ),
-                child: Text("Criar Conta",
-                style: TextStyle(
-                fontFamily: "Arial",
-                fontSize: 
-                ),
+                child: Text(
+                  "Criar Conta",
+                  style: TextStyle(fontFamily: "Arial", fontSize: 25),
                 ),
               ),
             ),
