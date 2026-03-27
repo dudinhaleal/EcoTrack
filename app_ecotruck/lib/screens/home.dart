@@ -7,12 +7,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // 🔝 APPBAR
       appBar: AppBar(
         title: Text("EcoTrack"),
         backgroundColor: Colors.deepPurple,
 
-        // 🔙 BOTÃO VOLTAR
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -21,21 +19,18 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
 
-      // ✅ BODY CORRIGIDO (com scroll)
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // 👋 Saudação
               Text(
-                "Olá, Erika 👋",
+                "Olá, Ronaldo 👋",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 20),
 
-              // 📊 RESUMO
               Row(
                 children: [
                   Expanded(child: card("12", "Coletas")),
@@ -48,7 +43,7 @@ class HomeScreen extends StatelessWidget {
 
               Row(
                 children: [
-                  Expanded(child: card("8kg", "CO₂")),
+                  Expanded(child: card("67kg", "CO₂")),
                   SizedBox(width: 10),
                   Expanded(child: card("75%", "Meta")),
                 ],
@@ -56,7 +51,6 @@ class HomeScreen extends StatelessWidget {
 
               SizedBox(height: 20),
 
-              // ⚡ AÇÕES
               Text("Ações", style: TextStyle(fontWeight: FontWeight.bold)),
               SizedBox(height: 10),
 
@@ -65,7 +59,6 @@ class HomeScreen extends StatelessWidget {
 
               SizedBox(height: 20),
 
-              // 📌 ATIVIDADES
               Text("Recentes", style: TextStyle(fontWeight: FontWeight.bold)),
               SizedBox(height: 10),
 
@@ -73,13 +66,12 @@ class HomeScreen extends StatelessWidget {
               atividade("Papel descartado", "+10 pts"),
               atividade("Vidro reciclado", "+15 pts"),
 
-              SizedBox(height: 30), // 👈 evita overflow
+              SizedBox(height: 30),
             ],
           ),
         ),
       ),
 
-      // 🔻 MENU INFERIOR
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.deepPurple,
         items: [
@@ -90,7 +82,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  // 🔹 CARD
   Widget card(String valor, String texto) {
     return Card(
       child: Container(
@@ -108,7 +99,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  // 🔹 BOTÃO
   Widget botao(String texto) {
     return Card(
       child: ListTile(
@@ -118,7 +108,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  // 🔹 ATIVIDADE
   Widget atividade(String titulo, String pontos) {
     return ListTile(
       leading: Icon(Icons.circle, size: 10, color: Colors.deepPurple),
